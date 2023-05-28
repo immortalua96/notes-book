@@ -14,3 +14,12 @@
  * прибрати завдання зі списку.
  * Список із завданнями має бути доступним після перезавантаження сторінки.
  */
+import { notsApi } from "./js/notsApi";
+import { refs } from './js/refs'
+import { renderCards } from "./js/renderCards";
+import { onBtnDeleteClick } from "./js/onBtnDeleteClick";
+import {onFormSubmit} from './js/onFormSubmit'
+
+refs.renderlist.addEventListener('click', onBtnDeleteClick)
+refs.form.addEventListener('submit',onFormSubmit)
+renderCards()
